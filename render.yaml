@@ -1,11 +1,3 @@
-services:
-  - type: web
-    plan: free
-    runtime: image
-    name: n8n-service
-    image:
-      url: docker.io/n8nio/n8n:latest
-
     envVars:
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
@@ -21,6 +13,8 @@ services:
       - key: DB_POSTGRESDB_USER
         value: postgres
       - key: DB_POSTGRESDB_PASSWORD
-        sync: false   # 👈 password will be added manually in dashboard
+        sync: false
+      - key: DB_POSTGRESDB_SSL_CA
+        value: "true"
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: "false"
