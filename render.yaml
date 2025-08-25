@@ -24,3 +24,18 @@ services:
         sync: false   # 👈 add manually in Render Dashboard
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: "false"
+ # EMAIL CONFIGURATION (SMTP)
+      - key: N8N_EMAIL_MODE
+        value: smtp
+      - key: N8N_SMTP_HOST
+        value: "smtp.zoho.com" # e.g., smtp.sendgrid.net
+      - key: N8N_SMTP_PORT
+        value: "465" # e.g., "587" for TLS or "465" for SSL
+      - key: N8N_SMTP_USER
+        sync: false   # 👈 add manually in Render Dashboard
+      - key: N8N_SMTP_PASS
+        sync: false   # 👈 add manually in Render Dashboard
+      - key: N8N_SMTP_SENDER
+        value: "Pharmalite Support <support@pharmalite.in>"
+      - key: N8N_SMTP_SSL
+        value: "true" # "true" if using SSL, "false" otherwise
