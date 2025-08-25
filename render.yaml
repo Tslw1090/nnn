@@ -36,6 +36,6 @@ services:
       - key: N8N_SMTP_PASS
         sync: false   # 👈 add manually in Render Dashboard
       - key: N8N_SMTP_SENDER
-        value: "Pharmalite Support <support@pharmalite.in>"
+        value: "Support<support@pharmalite.in>"
       - key: N8N_SMTP_SSL
         value: "true" # "true" if using SSL, "false" otherwise
